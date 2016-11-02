@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="hikashoppayment">
+	<name>Hikashop Paymentsense Payment Plugin</name>
+	<creationDate>April 2011</creationDate>
+	<author>Paymentsense</author>	
+	<version>1.0.0</version>
+	<authorEmail>dev@hikashop.com</authorEmail>
+	<authorUrl>http://www.hikashop.com</authorUrl>
+	<copyright>Copyright (C) 2010 HIKARI SOFTWARE SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin enables you to setup your PaymentSense payment system</description>
+	<files>
+		<filename plugin="paymentsense">paymentsense.php</filename>
+		<filename>paymentsense_configuration.php</filename>
+		<filename>paymentsense_end.php</filename>
+		<filename>paymentsense_thankyou.php</filename>
+		<filename>paymentsense_threedsecure.php</filename>
+	</files>
+	<params addpath="/components/com_hikashop/params">
+		<param name="pluginoptions" type="pluginoptions" default="plugin" label="hikashop" description="HikaShop options" />
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_hikashop/fields">
+			<fieldset name="basic">
+				<field id="pluginoptions" name="pluginoptions"	type="pluginoptions" label="hikashop" description="HikaShop options" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
