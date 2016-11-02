@@ -334,7 +334,7 @@ class plgHikashoppaymentPaymentsense extends hikashopPaymentPlugin
 								$mailer->setSender($sender);
 								$mailer->addRecipient(explode(',',$config->get('payment_notification_email')));
 						
-								$order->order_status = $method->payment_params->verified_status;
+								$order->order_status = $element->payment_params->verified_status;
 								$order->history->history_notified = 1;
 								$payment_status = 'confirmed';
 					
@@ -804,7 +804,7 @@ class plgHikashoppaymentPaymentsense extends hikashopPaymentPlugin
 		        $mailer->setSender($sender);
 		        $mailer->addRecipient(explode(',',$config->get('payment_notification_email')));
 		        
-		        $order->order_status = $method->payment_params->verified_status;
+		        $order->order_status = $element->payment_params->verified_status;//
 		        $order->history->history_notified = 1;
 		        $payment_status = 'confirmed';
 		        	
